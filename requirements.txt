@@ -1,0 +1,9 @@
+Django==1.11.2
+django-filter==1.0.4
+django-rest-swagger==2.1.2
+djangorestframework==3.6.3
+djangorestframework-jwt==1.10.0
+factory-boy==2.8.1
+Faker==0.7.17
+ipython==6.1.0
+ipython-genutils==0.2.0
