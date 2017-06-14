@@ -1,22 +1,11 @@
 import os
 
-# Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-
-
-# Quick-start development settings - unsuitable for production
-# See https://docs.djangoproject.com/en/1.11/howto/deployment/checklist/
-
-# SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = 'b9)zrr8jpob#2z+%#7op(-%*^26-)z$iyj((626^!7c!#6+del'
 
-# SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
 ALLOWED_HOSTS = []
-
-
-# Application definition
 
 INSTALLED_APPS = [
     'django.contrib.auth',
@@ -27,6 +16,7 @@ INSTALLED_APPS = [
 
     # Third apps
     'rest_framework',
+'rest_framework_swagger',
     'django_filters',
 
     # My apps
@@ -66,9 +56,6 @@ TEMPLATES = [
 WSGI_APPLICATION = 'hyperion.wsgi.application'
 
 
-# Database
-# https://docs.djangoproject.com/en/1.11/ref/settings/#databases
-
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
@@ -76,9 +63,6 @@ DATABASES = {
     }
 }
 
-
-# Password validation
-# https://docs.djangoproject.com/en/1.11/ref/settings/#auth-password-validators
 
 AUTH_PASSWORD_VALIDATORS = [
     {
@@ -95,9 +79,33 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
+REST_FRAMEWORK = {
+    'TEST_REQUEST_DEFAULT_FORMAT': 'json',
+    'DEFAULT_RENDERER_CLASSES': (
+        'rest_framework.renderers.JSONRenderer',
+        'rest_framework.renderers.BrowsableAPIRenderer',
+    ),
+    'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.LimitOffsetPagination',
+    'PAGE_SIZE': 100
+}
 
-# Internationalization
-# https://docs.djangoproject.com/en/1.11/topics/i18n/
+
+# REST_FRAMEWORK = {
+#     'DEFAULT_AUTHENTICATION_CLASSES': (
+#         'rest_framework.authentication.SessionAuthentication',
+#     ),
+#     'COERCE_DECIMAL_TO_STRING': False,
+#     'DATETIME_FORMAT': 'iso-8601',
+#     'DATETIME_INPUT_FORMATS': ['iso-8601'],
+#     'TEST_REQUEST_DEFAULT_FORMAT': 'json',
+#     'ORDERING_PARAM': 'sort',
+#     'TEST_REQUEST_RENDERER_CLASSES': (
+#         'rest_framework.renderers.MultiPartRenderer',
+#         'rest_framework.renderers.JSONRenderer',
+#     ),
+# }
+
+
 
 LANGUAGE_CODE = 'en-us'
 
@@ -107,10 +115,7 @@ USE_I18N = True
 
 USE_L10N = True
 
-USE_TZ = True
+USE_TZ = False
 
-
-# Static files (CSS, JavaScript, Images)
-# https://docs.djangoproject.com/en/1.11/howto/static-files/
 
 STATIC_URL = '/static/'

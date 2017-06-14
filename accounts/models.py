@@ -29,4 +29,3 @@ class Account(core_models.BaseDate):
 
     class Meta:
         ordering = ['-created_date']
-
