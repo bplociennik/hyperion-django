@@ -3,9 +3,9 @@ import os
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'b9)zrr8jpob#2z+%#7op(-%*^26-)z$iyj((626^!7c!#6+del'
 
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['hyperion-django.herokuapp.com']
 
 INSTALLED_APPS = [
     'django.contrib.auth',
