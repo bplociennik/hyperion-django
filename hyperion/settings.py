@@ -12,7 +12,6 @@ INSTALLED_APPS = [
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
-    'django.contrib.staticfiles',
 
     # Third apps
     'rest_framework',
@@ -100,5 +99,3 @@ USE_L10N = True
 
 USE_TZ = False
 
-
-STATIC_URL = '/static/'
