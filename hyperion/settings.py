@@ -7,6 +7,7 @@ DEBUG = False
 
 ALLOWED_HOSTS = ['hyperion-django.herokuapp.com']
 
+
 INSTALLED_APPS = [
     'django.contrib.auth',
     'django.contrib.contenttypes',
