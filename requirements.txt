@@ -1,3 +1,4 @@
+gunicorn
 psycopg2
 certifi==2017.4.17
 chardet==3.0.3
