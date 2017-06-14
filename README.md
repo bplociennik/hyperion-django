@@ -8,7 +8,19 @@ Hyperion is a simple web password manager write using Python, Django and DRF and
 
 ### Demo
 
-...
+Project is running on Heroku: https://hyperion-django.herokuapp.com/
+
+Every push to heroku branch deploy new version app from Github branch.
+
+You can log in using temporary DRF auth system:
+
+https://hyperion-django.herokuapp.com/api-auth/login/
+
+##### Account for tests:
+```sh
+u24200
+vJzgvyyh
+```
 
 ### Installation
 
