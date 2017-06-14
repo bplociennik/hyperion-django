@@ -1,7 +1,7 @@
 import factory
 
 from core.tests import factories as core_factories
-from django.contrib.auth.models import User
+
 
 class AccountFactory(factory.DjangoModelFactory):
     class Meta:
@@ -12,4 +12,3 @@ class AccountFactory(factory.DjangoModelFactory):
     login = factory.Sequence(lambda n: 'login%s' % n)
     url = factory.LazyAttribute(lambda o: 'https://%s.com' % o.login)
     password = 'qwerty'
-

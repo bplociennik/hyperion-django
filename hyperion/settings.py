@@ -3,7 +3,7 @@ import os
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'b9)zrr8jpob#2z+%#7op(-%*^26-)z$iyj((626^!7c!#6+del'
 
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = []
 
@@ -16,7 +16,7 @@ INSTALLED_APPS = [
 
     # Third apps
     'rest_framework',
-'rest_framework_swagger',
+    'rest_framework_swagger',
     'django_filters',
 
     # My apps
@@ -88,23 +88,6 @@ REST_FRAMEWORK = {
     'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.LimitOffsetPagination',
     'PAGE_SIZE': 100
 }
-
-
-# REST_FRAMEWORK = {
-#     'DEFAULT_AUTHENTICATION_CLASSES': (
-#         'rest_framework.authentication.SessionAuthentication',
-#     ),
-#     'COERCE_DECIMAL_TO_STRING': False,
-#     'DATETIME_FORMAT': 'iso-8601',
-#     'DATETIME_INPUT_FORMATS': ['iso-8601'],
-#     'TEST_REQUEST_DEFAULT_FORMAT': 'json',
-#     'ORDERING_PARAM': 'sort',
-#     'TEST_REQUEST_RENDERER_CLASSES': (
-#         'rest_framework.renderers.MultiPartRenderer',
-#         'rest_framework.renderers.JSONRenderer',
-#     ),
-# }
-
 
 
 LANGUAGE_CODE = 'en-us'

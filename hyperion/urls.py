@@ -4,8 +4,7 @@ from rest_framework_jwt import views as rf_jwt
 
 
 urlpatterns = [
-    # DRF temporary log in for tests API
-    # TODO: remove after write tests!
+    # DRF temporary log in for rest API
     url(r'^api-auth/', include('rest_framework.urls', namespace='rest_framework')),
 
     # JWT support
