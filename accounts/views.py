@@ -10,7 +10,25 @@ from accounts import filtering as accounts_filtering
 
 
 class AccountViewSet(rest_framework.viewsets.ModelViewSet):
-    """API Endpoints using Account model"""
+    """
+    API Endpoints using Account model
+    
+    retrieve:
+    Return account object.
+    
+    list:
+    Return a list of all accounts for logged user.
+    
+    create:
+    Create a new account assigned logged user.
+    
+    update:
+    Logged user can update account data.
+    
+    delete:
+    Delete account object.
+    
+    """
     serializer_class = accounts_serializers.AccountSerializer
     permission_classes = (rest_framework.permissions.IsAuthenticated,)
 
