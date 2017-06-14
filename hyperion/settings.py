@@ -59,8 +59,12 @@ WSGI_APPLICATION = 'hyperion.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'ddklpd8ue9kikf',
+        'USER': 'izugmzrwdozziq',
+        'PASSWORD': '9acd94289d9cae5c34e5f66c395cc946bec284d41cf9fbaa33e9c7df289d9a2e',
+        'HOST': 'ec2-54-247-166-129.eu-west-1.compute.amazonaws.com',
+        'PORT': '5432',
     }
 }
 
