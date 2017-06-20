@@ -1,3 +1,4 @@
+import datetime
 import os
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -95,6 +96,10 @@ REST_FRAMEWORK = {
         ),
 }
 
+JWT_AUTH = {
+    'JWT_EXPIRATION_DELTA': datetime.timedelta(hours=1),
+    'JWT_ALLOW_REFRESH': True,
+}
 
 LANGUAGE_CODE = 'en-us'
 
